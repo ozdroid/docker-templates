@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>code-server</Name>
+  <Repository>lscr.io/linuxserver/code-server:latest</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/code-server</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-code-server/issues/new/choose</Support>
+  <Project>https://coder.com</Project>
+  <Overview>Code-server(https://coder.com) is VS Code running on a remote server, accessible through the browser.&#xD;
+- Code on your Chromebook, tablet, and laptop with a consistent dev environment.&#xD;
+- If you have a Windows or Mac workstation, more easily develop for Linux.&#xD;
+- Take advantage of large cloud servers to speed up tests, compilations, downloads, and more.&#xD;
+- Preserve battery life when you're on the go.&#xD;
+- All intensive computation runs on your server.&#xD;
+- You're no longer running excess instances of Chrome.</Overview>
+  <Category>Cloud: Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8443]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/master/unraid/code-server.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/code-server-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1653904029</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Code-server(https://coder.com) is VS Code running on a remote server, accessible through the browser.&#xD;
+- Code on your Chromebook, tablet, and laptop with a consistent dev environment.&#xD;
+- If you have a Windows or Mac workstation, more easily develop for Linux.&#xD;
+- Take advantage of large cloud servers to speed up tests, compilations, downloads, and more.&#xD;
+- Preserve battery life when you're on the go.&#xD;
+- All intensive computation runs on your server.&#xD;
+- You're no longer running excess instances of Chrome.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4000</HostPort>
+        <ContainerPort>4000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/code-server</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>wszasd</Value>
+      <Name>PASSWORD</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>wszasd</Value>
+      <Name>SUDO_PASSWORD</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>/config/workspace</Value>
+      <Name>DEFAULT_WORKSPACE</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="8443" Default="8443" Mode="tcp" Description="web gui" Type="Port" Display="always" Required="true" Mask="false">8443</Config>
+  <Config Name="PASSWORD" Target="PASSWORD" Default="password" Mode="{3}" Description="Optional web gui password, if `PASSWORD` or `HASHED_PASSWORD` is not provided, there will be no auth." Type="Variable" Display="always" Required="false" Mask="true">wszasd</Config>
+  <Config Name="SUDO_PASSWORD" Target="SUDO_PASSWORD" Default="password" Mode="{3}" Description="If this optional variable is set, user will have sudo access in the code-server terminal with the specified password." Type="Variable" Display="always" Required="false" Mask="true">wszasd</Config>
+  <Config Name="DEFAULT_WORKSPACE" Target="DEFAULT_WORKSPACE" Default="/config/workspace" Mode="{3}" Description="If this optional variable is set, code-server will open this directory by default" Type="Variable" Display="always" Required="false" Mask="false">/config/workspace</Config>
+  <Config Name="Host Port 2" Target="3000" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 3000" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="Host Port 3" Target="4000" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 4000" Type="Port" Display="always" Required="false" Mask="false">4000</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/code-server" Mode="rw" Description="Contains all relevant configuration files." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/code-server</Config>
+</Container>

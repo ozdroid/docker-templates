@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ubuntu</Name>
+  <Repository>ubuntu</Repository>
+  <Registry>https://hub.docker.com/_/ubuntu/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://hub.docker.com/_/ubuntu/</Support>
+  <Project/>
+  <Overview>Ubuntu is a Debian-based Linux operating system based on free software.&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/_/ubuntu/</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://d1q6f0aelx0por.cloudfront.net/product-logos/library-ubuntu-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1653973137</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Ubuntu is a Debian-based Linux operating system based on free software.&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/_/ubuntu/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+</Container>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>mongodb</Name>
+  <Repository>mongo:4.4.14</Repository>
+  <Registry>https://hub.docker.com/_/mongo</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://lime-technology.com/forums/topic/69490-support-jj9987-redis/</Support>
+  <Project>https://www.mongodb.com/</Project>
+  <Overview>mongodb</Overview>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://d1q6f0aelx0por.cloudfront.net/product-logos/library-mongo-express-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs>-f /data/configdb/mongodb.conf</PostArgs>
+  <CPUset/>
+  <DateInstalled>1654184539</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>mongodb</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>27017</HostPort>
+        <ContainerPort>27017</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mongodb/db</HostDir>
+      <ContainerDir>/data/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mongodb/auth</HostDir>
+      <ContainerDir>/data/auth</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mongodb/config</HostDir>
+      <ContainerDir>/data/configdb</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mongodb/log</HostDir>
+      <ContainerDir>/data/log/</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port" Target="27017" Default="27017" Mode="tcp" Description="The default connection port." Type="Port" Display="always" Required="true" Mask="{8}">27017</Config>
+  <Config Name="data" Target="/data/db" Default="/mnt/user/appdata/mongodb/db" Mode="rw" Description="data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mongodb/db</Config>
+  <Config Name="auth" Target="/data/auth" Default="/mnt/user/appdata/mongodb/auth" Mode="rw" Description="auth" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mongodb/auth</Config>
+  <Config Name="config" Target="/data/configdb" Default="/mnt/user/appdata/mongodb/config" Mode="rw" Description="config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mongodb/config</Config>
+  <Config Name="log" Target="/data/log/" Default="/mnt/user/appdata/mongodb/log" Mode="ro" Description="log" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mongodb/log</Config>
+</Container>

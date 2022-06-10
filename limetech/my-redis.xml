@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>redis</Name>
+  <Repository>redis:latest</Repository>
+  <Registry>https://registry.hub.docker.com/_/redis/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://lime-technology.com/forums/topic/69490-support-jj9987-redis/</Support>
+  <Project>https://redis.io/</Project>
+  <Overview>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. Based on official Redis Docker image.</Overview>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/Redis.xml</TemplateURL>
+  <Icon>https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-1024.png</Icon>
+  <ExtraParams/>
+  <PostArgs>redis-server /etc/redis/redis.conf</PostArgs>
+  <CPUset/>
+  <DateInstalled>1654187475</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. Based on official Redis Docker image.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6379</HostPort>
+        <ContainerPort>6379</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/redis/config/redis.conf</HostDir>
+      <ContainerDir>/etc/redis/redis.conf</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/redis/data</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Description="This is Redis default connection port." Type="Port" Display="always" Required="true" Mask="{8}">6379</Config>
+  <Config Name="Config File" Target="/etc/redis/redis.conf" Default="/mnt/user/appdata/redis/config/redis.conf" Mode="ro" Description="redis config file" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/redis/config/redis.conf</Config>
+  <Config Name="Data File" Target="/config" Default="/mnt/user/appdata/redis/data" Mode="rw" Description="redis storage data files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/redis/data</Config>
+</Container>

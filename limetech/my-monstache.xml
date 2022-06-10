@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>monstache</Name>
+  <Repository>rwynn/monstache:6.7.2</Repository>
+  <Registry>https://hub.docker.com/r/rwynn/monstache/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://hub.docker.com/r/rwynn/monstache/</Support>
+  <Project/>
+  <Overview>a go daemon that syncs mongodb to elasticsearch in realtime&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/rwynn/monstache/</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://www.vhv.rs/dpng/d/8-86313_elasticsearch-icon-png-transparent-png.png</Icon>
+  <ExtraParams/>
+  <PostArgs>-f /app/monstache.config.toml</PostArgs>
+  <CPUset/>
+  <DateInstalled>1654193484</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>a go daemon that syncs mongodb to elasticsearch in realtime&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/rwynn/monstache/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8085</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/monstache/config/monstache.config.toml</HostDir>
+      <ContainerDir>/app/monstache.config.toml</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/monstache/plugin/plugin.so</HostDir>
+      <ContainerDir>/app/plugin.so</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>true</Value>
+      <Name>Community_Applications_Conversion</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Community Applications Conversion" Target="Community_Applications_Conversion" Default="true" Mode="{3}" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Host Port 1" Target="8080" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8085</Config>
+  <Config Name="Host Path 1" Target="/app/monstache.config.toml" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /app/monstache.config.toml" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/monstache/config/monstache.config.toml</Config>
+  <Config Name="Host Path 2" Target="/app/plugin.so" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /app/plugin.so" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/monstache/plugin/plugin.so</Config>
+</Container>

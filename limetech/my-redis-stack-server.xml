@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>redis-stack-server</Name>
+  <Repository>redis/redis-stack-server</Repository>
+  <Registry>https://hub.docker.com/r/redis/redis-stack-server/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/redis/redis-stack-server/</Support>
+  <Project/>
+  <Overview>&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/redis/redis-stack-server/</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-1024.png</Icon>
+  <ExtraParams/>
+  <PostArgs>redis-server /etc/redis/redis.conf</PostArgs>
+  <CPUset/>
+  <DateInstalled>1654159151</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/redis/redis-stack-server/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6380</HostPort>
+        <ContainerPort>6379</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>REDISBLOOM_ARGS</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>REDISEARCH_ARGS</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>REDISJSON_ARGS</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>REDISTIMESERIES_ARGS</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>REDISGRAPH_ARGS</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>REDIS_ARGS</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>Community_Applications_Conversion</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Container Port 1" Target="6379" Default="6379" Mode="tcp" Description="Container Port: 6379" Type="Port" Display="always" Required="false" Mask="false">6380</Config>
+  <Config Name="Container Variable 1" Target="REDISBLOOM_ARGS" Default="" Mode="{3}" Description="Container Variable: REDISBLOOM_ARGS" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Container Variable 2" Target="REDISEARCH_ARGS" Default="" Mode="{3}" Description="Container Variable: REDISEARCH_ARGS" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Container Variable 3" Target="REDISJSON_ARGS" Default="" Mode="{3}" Description="Container Variable: REDISJSON_ARGS" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Container Variable 4" Target="REDISTIMESERIES_ARGS" Default="" Mode="{3}" Description="Container Variable: REDISTIMESERIES_ARGS" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Container Variable 5" Target="REDISGRAPH_ARGS" Default="" Mode="{3}" Description="Container Variable: REDISGRAPH_ARGS" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Container Variable 6" Target="REDIS_ARGS" Default="" Mode="{3}" Description="Container Variable: REDIS_ARGS" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Community Applications Conversion" Target="Community_Applications_Conversion" Default="true" Mode="{3}" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+</Container>

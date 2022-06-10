@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>openvscode-server</Name>
+  <Repository>lscr.io/linuxserver/openvscode-server:latest</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/openvscode-server</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-openvscode-server/issues/new/choose</Support>
+  <Project>https://github.com/gitpod-io/openvscode-server</Project>
+  <Overview>Openvscode-server(https://github.com/gitpod-io/openvscode-server) provides a version of VS Code that runs a server on a remote machine and allows access through a modern web browser.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:3000]/?tkn=lsio</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/master/unraid/openvscode-server.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Olprog59/unraid-templates/main/openvscode-server/vscode.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1653912016</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Openvscode-server(https://github.com/gitpod-io/openvscode-server) provides a version of VS Code that runs a server on a remote machine and allows access through a modern web browser.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/openvscode-server</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>CONNECTION_TOKEN</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CONNECTION_SECRET</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>wszasd</Value>
+      <Name>SUDO_PASSWORD</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SUDO_PASSWORD_HASH</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Web UI port." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="CONNECTION_TOKEN" Target="CONNECTION_TOKEN" Default="" Mode="{3}" Description="Optional security token for accessing the Web UI (ie. `supersecrettoken`)." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="CONNECTION_SECRET" Target="CONNECTION_SECRET" Default="" Mode="{3}" Description="Optional path to a file inside the container that contains the security token for accessing the Web UI (ie. `/path/to/file`). Overrides `CONNECTION_TOKEN`." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SUDO_PASSWORD" Target="SUDO_PASSWORD" Default="password" Mode="{3}" Description="If this optional variable is set, user will have sudo access in the openvscode-server terminal with the specified password." Type="Variable" Display="always" Required="false" Mask="true">wszasd</Config>
+  <Config Name="SUDO_PASSWORD_HASH" Target="SUDO_PASSWORD_HASH" Default="" Mode="{3}" Description="Optionally set sudo password via hash (takes priority over `SUDO_PASSWORD` var). Format is `$type$salt$hashed`." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/openvscode-server" Mode="rw" Description="Contains all relevant configuration files." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/openvscode-server</Config>
+</Container>
