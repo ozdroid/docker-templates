@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>codefever</Name>
+  <Repository>pgyer/codefever-community</Repository>
+  <Registry>https://hub.docker.com/r/pgyer/codefever-community/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://hub.docker.com/r/pgyer/codefever-community/</Support>
+  <Project/>
+  <Overview>&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/pgyer/codefever-community/</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8081]</WebUI>
+  <TemplateURL/>
+  <Icon>https://codefever.cn/static/00000000000001/images/community/excellent-security-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1654855004</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/pgyer/codefever-community/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2201</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>true</Value>
+      <Name>Community_Applications_Conversion</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Container Port 1" Target="22" Default="22" Mode="tcp" Description="Container Port: 22" Type="Port" Display="always" Required="false" Mask="false">2201</Config>
+  <Config Name="Container Port 2" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
+  <Config Name="Community Applications Conversion" Target="Community_Applications_Conversion" Default="true" Mode="{3}" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+</Container>
