@@ -17,11 +17,11 @@ https://hub.docker.com/r/pgyer/codefever-community/</Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:8081]</WebUI>
   <TemplateURL/>
-  <Icon>https://codefever.cn/static/00000000000001/images/community/excellent-security-icon.png</Icon>
+  <Icon>https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1654855004</DateInstalled>
+  <DateInstalled>1654914106</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>&#xD;
